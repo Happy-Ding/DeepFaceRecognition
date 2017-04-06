@@ -48,10 +48,7 @@ if __name__ == "__main__":
     if visual:
       import seaborn as sns
       import matplotlib.pyplot as plt
-      fig = plt.figure()
-      ax = fig.add_subplot(111)
-      # the histogram of the data
-      n, bins, patches = ax.hist(l2dist, len(l2dist)//2, facecolor='green')
+      ax = sns.distplot(l2dist)
       ax.set_xlabel('L2 Distance')
       ax.set_ylabel('Probability')
       ax.set_title(folder)
